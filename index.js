@@ -5,7 +5,7 @@ const user_version = core.getInput("version");
 const user_projectPath = core.getInput("projectPath");
 let user_args = core.getInput("args");
 
-const apiKey = process.env.API_KEY;
+const apiKey = '2d04df89-8ae6-4b1d-9f40-ca383c8bc02a';
 
 if (!apiKey) {
   core.setFailed("API key is not set in the environment variables.");
