@@ -3,7 +3,11 @@ const core = require("@actions/core");
 
 const user_version = core.getInput("version");
 const user_projectPath = core.getInput("projectPath");
-const user_args = core.getInput("args");
+let user_args = core.getInput("args");
+
+const apiKey = core.getInput("apiKey");
+
+user_args += ` -apiKey=${apiKey}`;
 
 try {
   execute(user_version, "", user_projectPath, user_args, "", "", {
