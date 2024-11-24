@@ -14,7 +14,7 @@ if (!apiKey) {
   process.exit(1);
 }
 
-let user_args = `-noSplash -retry=0 -testSuitePath=${user_testSuitePath} -browserType=${user_browserType} -executionProfile=${user_executionProfile} -apiKey=${apiKey} --config -webui.autoUpdateDrivers=true`;
+let user_args = `-noSplash -retry=0 -testSuitePath="${user_testSuitePath}" -browserType=${user_browserType} -executionProfile=${user_executionProfile} -apiKey=${apiKey} --config -webui.autoUpdateDrivers=true`;
 
 try {
   execute(user_version, "", user_projectPath, user_args, "", "", {
