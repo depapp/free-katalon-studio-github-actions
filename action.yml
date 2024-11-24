@@ -14,10 +14,17 @@ inputs:
             required: true
             default: '${{ github.workspace }}'
             
-      args:
-            description: 'What arguments to run Katalon Studio project'
+      testSuitePath:
+            description: 'Path to the test suite to execute'
             required: true
-            default: ''
+            
+      browserType:
+            description: 'Type of browser to use for execution'
+            required: true
+            
+      executionProfile:
+            description: 'Execution profile to use'
+            required: true
 
 runs:
       using: 'node20'

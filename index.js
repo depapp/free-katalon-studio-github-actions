@@ -3,7 +3,9 @@ const core = require("@actions/core");
 
 const user_version = core.getInput("version");
 const user_projectPath = core.getInput("projectPath");
-let user_args = core.getInput("args");
+const user_testSuitePath = core.getInput("testSuitePath");
+const user_browserType = core.getInput("browserType");
+const user_executionProfile = core.getInput("executionProfile");
 
 const apiKey = '2d04df89-8ae6-4b1d-9f40-ca383c8bc02a';
 
@@ -12,7 +14,7 @@ if (!apiKey) {
   process.exit(1);
 }
 
-user_args += ` -apiKey=${apiKey}`;
+let user_args = `-noSplash -retry=0 -testSuitePath=${user_testSuitePath} -browserType=${user_browserType} -executionProfile=${user_executionProfile} -apiKey=${apiKey} --config -webui.autoUpdateDrivers=true`;
 
 try {
   execute(user_version, "", user_projectPath, user_args, "", "", {
