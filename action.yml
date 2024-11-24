@@ -1,5 +1,8 @@
 name: 'Free Katalon Studio'
 description: 'Execute Katalon Studio project on Github Actions with No Cost'
+branding:
+      icon: "check-square"
+      color: "green"
 inputs:
       version:
             description: 'Which version of Katalon Studio to run'
