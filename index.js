@@ -23,14 +23,14 @@ try {
   })
     .then((status) => {
       if (status !== 0) {
-        logError(`Exit code ${status}.`);
+        core.setFailed(`Exit code ${status}.`);
       }
     })
     .catch((err) => {
       console.error(err);
-      logError(err);
+      core.setFailed(err);
     });
 } catch (error) {
   console.error(error);
-  logError(error.message);
+  core.setFailed(error.message);
 }
