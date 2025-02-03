@@ -1,0 +1,24 @@
+{
+  "name": "free-katalon-studio-github-actions",
+  "version": "2.8.0",
+  "description": "Execute Katalon Studio project on Github Actions with No Cost",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/depapp/free-katalon-studio-github-actions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/depapp/free-katalon-studio-github-actions/issues"
+  },
+  "homepage": "https://github.com/depapp/free-katalon-studio-github-actions#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^3.0.0",
+    "katalon-cli": "github:katalon-studio/katalon-agent#v1.4.0"
+  }
+}

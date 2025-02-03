@@ -1,0 +1,31 @@
+name: 'Free Katalon Studio on Github Actions'
+description: 'Execute Katalon Studio project on Github Actions with No Cost'
+branding:
+      icon: "check-square"
+      color: "green"
+inputs:
+      version:
+            description: 'Which version of Katalon Studio to run'
+            required: true
+            default: '9.6.0'
+            
+      projectPath:
+            description: 'Where the Katalon Studio project is checked out'
+            required: true
+            default: '${{ github.workspace }}'
+            
+      testSuitePath:
+            description: 'Path to the test suite to execute'
+            required: true
+            
+      browserType:
+            description: 'Type of browser to use for execution'
+            required: true
+            
+      executionProfile:
+            description: 'Execution profile to use'
+            required: true
+
+runs:
+      using: 'node20'
+      main: 'index.js'
