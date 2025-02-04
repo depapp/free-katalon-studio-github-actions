@@ -33,4 +33,10 @@ jobs:
         testSuitePath: 'Test Suites/Verify Operations'
         browserType: 'Chrome'
         executionProfile: 'default'
+    - name: Build Katalon Reports as Artifact
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: Katalon-Reports
+        path: Reports/
 ```
